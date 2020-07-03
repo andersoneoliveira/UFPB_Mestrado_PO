@@ -1,0 +1,15 @@
+//estabelecer a conexão com a planilha, que deixei salva na raiz da pasta de trbalho do projeto
+SheetConnection sheet("Dados_CD.xlsx");
+
+//nome do parâmetro e seus dados, não preciso declar o tipo do dado aqui, já foi feito no modelo
+//ler os dados sobre a capacidade das usinas - usando intervalo nomeado na planilha excel
+nVertices from SheetRead(sheet,"nVertices");
+distancia from SheetRead(sheet,"Distancias");
+//Capacidade from SheetRead(sheet,"Capacidade");
+
+
+
+
+
+//escrevendo o resultado na planilha Excel - Result é o nome que dei na planilha Excel pasta Resultado ao intervalo renomeado
+rota to SheetWrite(sheet,"Result");
